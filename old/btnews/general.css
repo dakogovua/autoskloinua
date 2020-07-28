@@ -1,0 +1,164 @@
+BODY {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #CCCCCC;
+	text-decoration: none;
+	text-align: left;
+	list-style-type: circle;
+	scrollbar-face-color: 000000;
+	scrollbar-shadow-color: 000000;
+	scrollbar-highlight-color: 000000;
+	scrollbar-3dlight-color: 595656;
+	scrollbar-darkshadow-color: 000000;
+	scrollbar-track-color: 000000;
+	scrollbar-arrow-color: ff0000;
+	background-color: #000000;
+}
+a:link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FF0000;
+	text-transform: none;
+}
+a:active {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	text-transform: capitalize;
+	color: #CCCCCC;
+	font-weight: bold;
+}
+a:visited {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FF0000;
+	font-weight: bold;
+	text-transform: none;
+}
+a:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.form {
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	BACKGROUND-COLOR: #595656;
+	background-image: none;
+	border: 1px solid #333333;
+	font-weight: normal;
+	text-align: left;
+	scrollbar-face-color: 595656;
+	scrollbar-shadow-color: 595656;
+	scrollbar-highlight-color: 595656;
+	scrollbar-3dlight-color: 595656;
+	scrollbar-darkshadow-color: 595656;
+	scrollbar-track-color: 595656;
+	scrollbar-arrow-color: ff0000; 
+}
+.title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: capitalize;
+	background-color: #000000;
+	color: #FFFFFF;
+	background-attachment: fixed;
+	background-image:  url(images/bg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	padding: 2px;
+	border: 1px solid #000000;
+	background-color: #000000;
+	text-align: center;
+}
+.maintable {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #595656;
+	text-decoration: none;
+	background-color: #595656;
+	border: 1px solid #FFFFFF;
+}
+.left {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+	width: 200px;
+}
+.right {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+	width: 200px;
+}
+.center {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+	margin: 2px;
+	padding: 2px;
+	width: 390px;
+}.odd {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-color: #595656;
+	padding: 2px;
+}
+.even {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	background-color: #595656;
+	border: 1px solid #000000;
+}
+.message {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	padding: 2px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-right-color: #333333;
+	border-left-color: #333333;
+	table-layout:fixed
+}
+.foot {
+	background-attachment: fixed;
+	background-image:  url(images/bgb.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	border: 1px solid #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-variant: small-caps;
+}
+.form2 {
+	font-size: 11px;
+	color: #FFFFFF;
+	background-color: #595656;
+	text-align: center;
+	border: 1px solid #333333;
+}
+.bot {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-variant: small-caps;
+}
+.bbbutton {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	text-transform: capitalize;
+	color: #333333;
+	background-color: #999999;
+	text-align: center;
+	border-top: 1px solid #666666;
+	border-right: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	border-left: 1px solid #666666;
+}

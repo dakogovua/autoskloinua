@@ -1,0 +1,134 @@
+Contents
+--------
+A) Install instructions
+B) Changes from version to version
+
+A) Install instructions
+--------------------------------------------------------------------
+
+How to install EasyNews version 4.3
+
+1) Unzip the EasyNews.zip to your root directory so that you have
+a directory structure like this:
+
+	root --> easynews --> newsfiles --> news.txt
+	root --> easynews --> newsfiles --> news.dat
+	root --> easynews --> newsfiles --> news.def
+	root --> easynews --> newsfiles --> headlines.txt
+	root --> easynews --> newsfiles --> arc.txt
+	root --> easynews --> config.php
+	root --> easynews --> config2.php
+	root --> easynews --> easynews.php
+	root --> easynews --> admin.php
+	root --> easynews --> easynews_install.txt
+	
+2) Upload the files to your webserver 
+
+3) CHMOD 666 to:
+	
+	news.txt
+	news.dat
+	headlines.txt
+	arc.txt
+	
+	These are located in the newsfiles directory. 
+	
+	And then CHMOD 666 to (located in the root easynews dir):
+	
+	config.php
+	config2.php
+
+4) Open up your webbrowser to: 
+	
+	http://www.yourserver.com/easynews/easynews.php
+	
+It will promt you for your username and password, enter in the values:
+username: admin and password: admin. Then goto: admin.php here you can edit config setting.
+
+	note: You must build news after every edit or new post
+
+5) In the page you want the news displayed use this code (must be
+php file)
+
+	<? include "./easynews/newsfiles/news.txt" ?>
+
+	for headlines its
+	
+	<? include "./easynews/newsfiles/headlines.txt" ?>
+
+	for the achive file its
+	
+	<? include "./easynews/newsfiles/arc.txt" ?>
+	
+if your server support SSI you can use any webpage extension that uses
+it and then use this code
+	
+	<!-- #include file="easynews/newsfiles/news.txt" -->
+	
+	for headlines its
+	
+	<!-- #include file="easynews/newsfiles/headlines.txt" -->
+	
+	for the achive file its
+	
+	<!-- #include file="easynews/newsfiles/arc.txt" -->
+	
+Save the file and your done!
+
+If you have any problems or suggestions for the next version goto:
+
+	http://www.webrc.ca/
+	
+Thank you for downloading EasyNews!
+
+
+B) Changes from version to version
+--------------------------------------------------------------------
+
+v. 4.3
+- delete mutiple posts at one time
+- shows the right amount of posts/headlines now
+
+v. 4.1
+- long post bug fixed
+
+v. 4.0
+- online admin panel
+- easier to use edit panel
+
+v. 3.0.2
+- time offset is fixed completly
+- easynews now runs smoothly on a windows server
+
+v. 3.0.1
+- fixed archiver
+
+v. 3.0.0
+- date and time are now 2 different fields
+- email address field added
+- 2 user levels: admin and normal
+- admins can edit all posts
+- normal users can only edit there own posts
+
+v. 2.2.2
+- improved time offset feature
+- improved main page showing what everything does
+- improved archiver that now actually saves to different file
+
+v. 2.2.1
+- time offset for news posts
+
+v. 2.2.0
+- ability to use headlines
+
+v. 2.1.0 beta 1
+- multiple users
+- users can only add/edit/delete posts with their username
+
+v. 2.0.1
+- ability to delete individual posts
+
+v. 2.0.0
+- news first stored in textual database then can be built from that 
+using a template u can create
+- ability to edit each post individually

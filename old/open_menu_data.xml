@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<menu type="Accordion Pro v 2.0" program_version="pro v 2.0">
+	<menu_structure>
+		<!--*************************************************************************-->
+		<!--*************************************************************************-->
+		<!--*************************************************************************-->
+		<item open_sound="menu_data/click.mp3" url="" open_window="" call_function_name="" call_function_parameter="">
+			<title_area>
+				<text pos_x="10" pos_y="5">&lt;h1&gt;Проект&lt;/h1&gt;</text>
+				<rect wh="30" round_rad_left_top="10" round_rad_right_bottom="10">
+					<color_and_alpha color_active="0x787D98" color_not_active="0x868893" alpha_active="1" alpha_not_active="1"/>
+				</rect>
+			</title_area>
+			<main_area bg_image="menu_data/1.jpg">
+				<html_field effect_type="none">
+					<distances from_left="5" from_top="150" from_right="20" from_bottom="0"/>
+					<text>
+					</text>
+				</html_field>
+			</main_area>
+		</item>
+		<item open_sound="menu_data/click.mp3" url="" open_window="" call_function_name="" call_function_parameter="">
+			<title_area>
+				<text pos_x="10" pos_y="5">&lt;h1&gt;Прайс&lt;/h1&gt;</text>
+				<rect wh="30" round_rad_left_top="0" round_rad_right_bottom="0">
+					<color_and_alpha color_active="0xD8D210" color_not_active="0x87856D" alpha_active="1" alpha_not_active="0.9"/>
+				</rect>
+			</title_area>
+			<main_area bg_image="menu_data/2.jpg">
+				<html_field effect_type="none">
+					<distances from_left="5" from_top="150" from_right="20" from_bottom="0"/>
+					<text>
+					</text>
+				</html_field>
+			</main_area>
+		</item>
+		<item open_sound="menu_data/click.mp3" url="" open_window="" call_function_name="" call_function_parameter="">
+			<title_area>
+				<text pos_x="10" pos_y="5">&lt;h1&gt;Контакти&lt;/h1&gt;</text>
+				<rect wh="30" round_rad_left_top="0" round_rad_right_bottom="0">
+					<color_and_alpha color_active="0xA37475" color_not_active="0x948386" alpha_active="1" alpha_not_active="0.9"/>
+				</rect>
+			</title_area>
+			<main_area bg_image="menu_data/3.jpg">
+				<html_field effect_type="none">
+					<distances from_left="5" from_top="150" from_right="20" from_bottom="5"/>
+					<text>
+					</text>
+				</html_field>
+			</main_area>
+		</item>
+		<item open_sound="menu_data/click.mp3" url="" open_window="" call_function_name="" call_function_parameter="">
+			<title_area>
+				<text pos_x="10" pos_y="5">&lt;h1&gt;Виробники&lt;/h1&gt;</text>
+				<rect wh="30" round_rad_left_top="0" round_rad_right_bottom="0">
+					<color_and_alpha color_active="0x6761A5" color_not_active="0x808097" alpha_active="1" alpha_not_active="0.9"/>
+				</rect>
+			</title_area>
+			<main_area bg_image="menu_data/4.jpg">
+				<html_field effect_type="none">
+					<distances from_left="5" from_top="150" from_right="20" from_bottom="5"/>
+					<text>
+					</text>
+				</html_field>
+			</main_area>
+		</item>
+		<item open_sound="menu_data/click.mp3" url="" open_window="" call_function_name="" call_function_parameter="">
+			<title_area>
+				<text pos_x="10" pos_y="5">&lt;h1&gt;Партнери&lt;/h1&gt;</text>
+				<rect wh="30" round_rad_left_top="0" round_rad_right_bottom="0">
+					<color_and_alpha color_active="0x548E4F" color_not_active="0x859384" alpha_active="1" alpha_not_active="0.9"/>
+				</rect>
+			</title_area>
+			<main_area bg_image="menu_data/5.jpg">
+				<html_field effect_type="none">
+					<distances from_left="5" from_top="150" from_right="20" from_bottom="5"/>
+					<text>
+					</text>
+				</html_field>
+			</main_area>
+		</item>
+		<item open_sound="menu_data/click.mp3" url="" open_window="" call_function_name="" call_function_parameter="">
+			<title_area>
+				<text pos_x="10" pos_y="5">&lt;h1&gt;Галерея&lt;/h1&gt;</text>
+				<rect wh="30" round_rad_left_top="0" round_rad_right_bottom="0">
+					<color_and_alpha color_active="0xD892C1" color_not_active="0x987E94" alpha_active="1" alpha_not_active="0.9"/>
+				</rect>
+			</title_area>
+			<main_area bg_image="menu_data/6.jpg">
+				<html_field effect_type="none">
+					<distances from_left="5" from_top="150" from_right="20" from_bottom="5"/>
+					<text>
+					</text>
+				</html_field>
+			</main_area>
+		</item>
+	</menu_structure>
+</menu>

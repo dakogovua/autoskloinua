@@ -1,0 +1,14 @@
+Index: config/params.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- config/params.php	(revision 31708843bb292cff21e5aa56f5a70c1f6957bc6f)
++++ config/params.php	(date 1546097482269)
+@@ -1,5 +1,5 @@
+ <?php
+ 
+ return [
+-    'adminEmail' => 'autoshibka@gmail.com',
++    'adminEmail' => 'koss@genuine.community.com',
+ ];

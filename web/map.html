@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geocoding Service</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #floating-panel {
+            position: absolute;
+            top: 10px;
+            left: 25%;
+            z-index: 5;
+            background-color: #fff;
+            padding: 5px;
+            border: 1px solid #999;
+            text-align: center;
+            font-family: 'Roboto','sans-serif';
+            line-height: 30px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<!--
+<div id="floating-panel">
+    <input id="address" type="textbox" value="Sydney, NSW">
+    <input id="submit" type="button" value="Geocode">
+</div> -->
+<div id="map"></div>
+<script>
+    var addr = [
+        "м. Київ – вул. Драгоманова 6А",
+        "м. Київ – вул. Драгоманова 6/1",
+        "м. Київ – вул. Драгоманова 7А",
+        "м. Київ – вул. Драгоманова 8Б",
+        "м. Київ – вул. Драгоманова 11",
+        "м. Київ – вул. Драгоманова 14А",
+       "м. Київ – вул. Анни Ахматової 3",
+        "м. Київ – вул. Анни Ахматової 3А",
+        "м. Київ – вул. Анни Ахматової 5",
+        "м. Київ – вул. Анни Ахматової 7/15",
+        "м. Київ – вул. Анни Ахматової 8",
+        "м. Київ – вул. Анни Ахматової 14Б",
+        "м. Київ – вул. Анни Ахматової 16Б",
+        "м. Київ – вул. Анни Ахматової 16Г",
+        "м. Київ – вул. Анни Ахматової 18",
+        "м. Київ – вул. Олени Пчілки",
+        "м. Київ – просп. Григоренка 1",
+        "м. Київ – просп. Григоренка11А",
+        "м. Київ – просп. Григоренка13",
+        "м. Київ – просп. Григоренка 13Б",
+        "м. Київ – просп. Григоренка 15"
+    ]
+  //  addr = addr.sort();
+
+    var info1 = [
+        "11",
+        "Сандалова Ганна Олександрівна (Самопоміч)",
+        "1320 (18%)",
+    ]
+
+    var triangleCoords = [];
+
+
+
+    function initMap() {
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                //center: {lat: -34.397, lng: 150.644},
+                center: {lat: 50.411632499999996, lng: 30.6431015}
+            });
+            var geocoder = new google.maps.Geocoder();
+
+            console.log('addr.length ', addr.length)
+        if (triangleCoords.length  != addr.length) {
+
+
+            (function next(counter, maxLoops) {
+                // break if maxLoops has been reached
+                if (counter++ ==  maxLoops ) return;
+
+                setTimeout(function() {
+                    console.log(addr[counter -1]);
+                    geocodeAddress2(geocoder, addr[counter -1])
+                    // call next() recursively
+                    next(counter, maxLoops);
+                }, 500);
+            })(0, addr.length);
+        }
+
+        if (triangleCoords.length  == addr.length){
+
+
+
+    console.log('triangleCoords ', triangleCoords)
+
+            var sortedCoords = Object.values(triangleCoords).sort( function(keyA, keyB) {
+                console.log(keyA.lat,' --- ', keyB)
+                return keyA.lat - keyB.lat;
+            });
+    console.log ('sortedCoords ', sortedCoords)
+
+            var bermudaTriangle = new google.maps.Polygon({
+                paths: sortedCoords,
+                strokeColor: '#FF0000',
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: '#FF0000',
+                fillOpacity: 0.35
+            });
+            bermudaTriangle.setMap(map);
+
+            bermudaTriangle.addListener('click', showArrays);
+
+            infoWindow = new google.maps.InfoWindow;
+
+            function showArrays(event) {
+                // Since this polygon has only one path, we can call getPath() to return the
+                // MVCArray of LatLngs.
+                var vertices = this.getPath();
+
+                var contentString = '<b>Округ </b>' + info1[0]
+
+                // Iterate over the vertices.
+           //     for (var i =0; i < vertices.getLength(); i++) {
+               //     var xy = vertices.getAt(i);
+                    contentString +=  '<br>' +
+                        '<b>Победитель: </b><br>' + info1[1]
+                    + '<br>' +
+                    '<b>Количество голосов: </b>' + info1[2];
+
+            //    }
+
+                // Replace the info window's content and position.
+                infoWindow.setContent(contentString);
+                infoWindow.setPosition(event.latLng);
+
+                infoWindow.open(map);
+            }
+        }
+    }
+
+
+    function geocodeAddress2(geocoder, address) {
+        //var address = document.getElementById('address').value;
+
+        geocoder.geocode({'address': address}, function(results, status) {
+
+            if (status === 'OK') {
+
+                console.log('status === \'OK\'', status, ' ', results)
+                // resultsMap.setCenter(results[0].geometry.location);
+                /* var marker = new google.maps.Marker({
+                 map: resultsMap,
+                 position: results[0].geometry.location
+                 }); */
+                var a = (results[0].geometry.viewport.l.j + results[0].geometry.viewport.l.l) / 2
+                var b = (results[0].geometry.viewport.j.j + results[0].geometry.viewport.j.l) / 2;
+                //console.log('results[0].geometry.bounds geocodeAddress2 ', a , ' ', b);
+                //coords.push('{a:' + a + ',' + 'b:' + b +'}');
+                //console.log (coords);
+                triangleCoords.push({lat:a, lng:b});
+
+                // console.log('triangleCoords.length ', triangleCoords.length, ' ', triangleCoords )
+                if (triangleCoords.length  == addr.length){
+                    initMap()
+                }
+
+
+            } else {
+                alert('Geocode was not successful for the following reason: ' + status);
+            }
+
+        });
+
+    }
+
+
+
+
+
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBx99xilBnoTJyoylY3s8D2YpsO2ZrnOlU&callback=initMap">
+</script>
+</body>
+</html>

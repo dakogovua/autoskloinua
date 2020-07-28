@@ -1,0 +1,57 @@
+body {
+	background-image: url(5.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	overflow-y: scroll ;
+	background-color:#FFFFFF;
+
+}
+HTML {
+    height: 100%;
+	
+   }
+.div1 {
+	margin: 0px;
+	padding: 0px;
+	width: 152px;
+	position: fixed;
+
+}
+.td2 {
+	margin: 0px;
+	padding: 0px;
+	width: 148px;
+	position: relative;
+}
+.tablest {
+	text-align: justify;
+	width: 70%;
+	position:absolute;
+	left: 200px;
+	
+}
+.td_pic {
+	background-image: url(bgpixel.png);
+}
+.td_pic {
+	background-image: url(bgpixel.png);
+	height:auto;
+}
+
+
+.fixed {
+	position: fixed; /*  */
+	left: 10px; /* */
+	bottom: 10px; 
+	padding: 10px;
+	width: 200px;
+}
+.div_88x31 {
+	/*position: fixed;   */
+	left: 0px; /* */
+	bottom: 0px;
+	padding: 1px;
+	width: 100%;
+	position: fixed;
+}
